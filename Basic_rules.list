@@ -1,24 +1,21 @@
 # DNS
-- DOMAIN,dns.google,Proxy
-- IP-CIDR,1.1.1.1/32,Proxy,no-resolve
-- IP-CIDR,1.0.0.1/32,Proxy,no-resolve
-- IP-CIDR,8.8.8.8/32,Proxy,no-resolve
-- IP-CIDR,119.29.29.29/32,DIRECT,no-resolve
-- IP-CIDR,114.114.114.114/32,DIRECT,no-resolve
+- IP-CIDR,1.1.1.1/32,no-resolve
+- IP-CIDR,1.0.0.1/32,no-resolve
+- IP-CIDR,8.8.8.8/32,no-resolve
+- IP-CIDR,119.29.29.29/32,no-resolve
+- IP-CIDR,114.114.114.114/32,no-resolve
 
 # LAN
-- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
-- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- IP-CIDR,127.0.0.0/8,no-resolve
+- IP-CIDR,10.0.0.0/8,no-resolve
+- IP-CIDR,17.0.0.0/8,no-resolve
+- IP-CIDR,100.64.0.0/10,no-resolve
+- IP-CIDR,172.16.0.0/12,no-resolve
+- IP-CIDR,192.168.0.0/16,no-resolve
 
-# RULE VERSION
-- DOMAIN,2020020202.version.clash.im,REJECT
 
-- DOMAIN-SUFFIX,cn,DIRECT
-- GEOIP,CN,DIRECT
+- DOMAIN-SUFFIX,cn
+- GEOIP,CN
 
 - GEOIP,SG,GLaDOS-SG-01
 - GEOIP,CA,GLaDOS-US-02
@@ -26,5 +23,4 @@
 - GEOIP,HK,GLaDOS-TW-02
 - GEOIP,JP,GLaDOS-TW-03
 
-# Final
-- MATCH,Proxy
+
