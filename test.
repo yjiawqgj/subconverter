@@ -6,7 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: GLaDOS-R2-01, server: e29715d.r1.glados-config.net, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: e29715d.dl.microsoft.lv:187313}, udp: true}
-  #……（中间的节点省略）
+  # ……省略
   - {name: GLaDOS-Netflix-03, server: e29715d.d3.glados-config.net, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: e29715d.dl.microsoft.dk.net:187313}}
 proxy-groups:
   - name: Proxy
@@ -15,7 +15,7 @@ proxy-groups:
       - Auto
       - DIRECT
       - GLaDOS-R2-01
-     #……（节点省略）
+     # ……省略
       - GLaDOS-Netflix-03
   - name: Auto
     type: url-test
@@ -24,7 +24,7 @@ proxy-groups:
     tolerance: 100
     proxies:
       - GLaDOS-R2-01
-      #……（活力省略）
+      # ……省略
       - GLaDOS-Netflix-03
   - name: PT
     type: url-test
