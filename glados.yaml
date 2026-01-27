@@ -1,7 +1,7 @@
 # GLaDOS
 # GLobal Local and Destination Operating System
-# Clash Config File for Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36-564232-21-461
-# Generated at Fri Jan 23 2026 10:02:31 GMT+0000 (Coordinated Universal Time) by Aperture Science
+# Mihomo Config File for clash.meta-564232-21-457
+# Generated at Mon Jan 26 2026 16:00:16 GMT+0000 (Coordinated Universal Time) by Aperture Science
 # ░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░░██████╗
 # ██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝
 # ██║░░██╗░██║░░░░░███████║██║░░██║██║░░██║╚█████╗░
@@ -32,214 +32,258 @@ secret: ""
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
+  fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:23453
-  nameserver:
+  default-nameserver:
     - 119.29.29.29
     - 114.114.114.114
     - 223.5.5.5
-  fallback:
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
+  nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - +.miwifi.com
+    - +.docker.io
+    - +.market.xiaomi.com
+    - +.push.apple.com
 
 proxies:
-  - name: GLaDOS-R1-01
+  - name: GLaDOS-R2-01
     type: ss
-    server: e29715d.r1.glados-config.net
+    server: e29715d.r1.gladns.com
     port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.md:187313
-  - name: GLaDOS-R1-02
-    type: ss
-    server: e29715d.r2.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.lv:187313
-  - name: GLaDOS-R1-03
-    type: ss
-    server: e29715d.r3.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.md:187313
-  - name: GLaDOS-R1-04
-    type: ss
-    server: e29715d.r4.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.ch:187313
-  - name: GLaDOS-R1-05
-    type: ss
-    server: e29715d.r5.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.nintendo.net:187313
-  - name: GLaDOS-R1-06
-    type: ss
-    server: e29715d.r6.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.xboxlive.com:187313
-  - name: GLaDOS-R1-07
-    type: ss
-    server: e29715d.r7.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.ge:187313
-  - name: GLaDOS-R1-08
-    type: ss
-    server: e29715d.r8.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.nintendo.net:187313
-  - name: GLaDOS-R1-09
-    type: ss
-    server: e29715d.r9.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.nintendo.net:187313
-  - name: GLaDOS-B1-01
-    type: ss
-    server: e29715d.b1.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.cat:187313
-  - name: GLaDOS-B1-02
-    type: ss
-    server: e29715d.b2.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.jp:187313
-  - name: GLaDOS-B1-03
-    type: ss
-    server: e29715d.b3.glados-config.net
-    port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
       host: e29715d.dl.nintendo.jp:187313
-  - name: GLaDOS-B1-04
+  - name: GLaDOS-R2-02
     type: ss
-    server: e29715d.b4.glados-config.net
+    server: e29715d.r2.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.dk:187313
-  - name: GLaDOS-B1-05
+      host: e29715d.dl.nintendo.jp:187313
+  - name: GLaDOS-R2-03
     type: ss
-    server: e29715d.b5.glados-config.net
+    server: e29715d.r3.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.com:187313
-  - name: GLaDOS-B1-06
+      host: e29715d.dl.nvidia.com:187313
+  - name: GLaDOS-R2-04
     type: ss
-    server: e29715d.b6.glados-config.net
+    server: e29715d.r4.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.it:187313
-  - name: GLaDOS-B1-07
+      host: e29715d.dl.microsoft.jp:187313
+  - name: GLaDOS-R2-05
     type: ss
-    server: e29715d.b7.glados-config.net
+    server: e29715d.r5.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.nintendo.eu:187313
+  - name: GLaDOS-R2-06
+    type: ss
+    server: e29715d.r6.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.fi:187313
+  - name: GLaDOS-R2-07
+    type: ss
+    server: e29715d.r7.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
       host: e29715d.dl.microsoft.lu:187313
+  - name: GLaDOS-R2-08
+    type: ss
+    server: e29715d.r8.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.md:187313
+  - name: GLaDOS-R2-09
+    type: ss
+    server: e29715d.r9.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.fi:187313
+  - name: GLaDOS-B1-01
+    type: ss
+    server: e29715d.b1.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.nintendo.com:187313
+  - name: GLaDOS-B1-02
+    type: ss
+    server: e29715d.b2.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.lu:187313
+  - name: GLaDOS-B1-03
+    type: ss
+    server: e29715d.b3.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.blizzard.com:187313
+  - name: GLaDOS-B1-04
+    type: ss
+    server: e29715d.b4.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.nintendo.com:187313
+  - name: GLaDOS-B1-05
+    type: ss
+    server: e29715d.b5.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.lt:187313
+  - name: GLaDOS-B1-06
+    type: ss
+    server: e29715d.b6.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.lu:187313
+  - name: GLaDOS-B1-07
+    type: ss
+    server: e29715d.b7.gladns.com
+    port: 2377
+    udp: true
+    udp-over-tcp: true
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.eu:187313
   - name: GLaDOS-B1-08
     type: ss
-    server: e29715d.b8.glados-config.net
+    server: e29715d.b8.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.net:187313
+      host: e29715d.dl.microsoft.md:187313
   - name: GLaDOS-B1-09
     type: ss
-    server: e29715d.b9.glados-config.net
+    server: e29715d.b9.gladns.com
     port: 2377
+    udp: true
+    udp-over-tcp: true
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.nintendo.de:187313
+      host: e29715d.dl.microsoft.eu:187313
 
   - name: GLaDOS-US-01
     type: ss
-    server: e29715d.u1.glados-config.net
+    server: e29715d.u1.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.nintendo.be:187313
+      host: e29715d.dl.microsoft.ch:187313
   - name: GLaDOS-US-02
     type: ss
-    server: e29715d.u2.glados-config.net
+    server: e29715d.u2.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
@@ -248,230 +292,318 @@ proxies:
       host: e29715d.dl.microsoft.de:187313
   - name: GLaDOS-US-03
     type: ss
-    server: e29715d.u3.glados-config.net
+    server: e29715d.u3.gladns.com
     port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.epicgames.com:187313
-  - name: GLaDOS-US-04
-    type: ss
-    server: e29715d.u4.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.cz:187313
-  - name: GLaDOS-US-05
-    type: ss
-    server: e29715d.u5.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.jp:187313
-  - name: GLaDOS-US-06
-    type: ss
-    server: e29715d.u6.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.eu:187313
-  - name: GLaDOS-JP-01
-    type: ss
-    server: e29715d.j1.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.nintendo.be:187313
-  - name: GLaDOS-JP-02
-    type: ss
-    server: e29715d.j2.glados-config.net
-    port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.nintendo.net:187313
-  - name: GLaDOS-JP-03
-    type: ss
-    server: e29715d.j3.glados-config.net
-    port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
       host: e29715d.dl.microsoft.lv:187313
-  - name: GLaDOS-TW-01
+  - name: GLaDOS-US-04
     type: ss
-    server: e29715d.t1.glados-config.net
+    server: e29715d.u4.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.it:187313
-  - name: GLaDOS-TW-02
+      host: e29715d.dl.microsoft.lt:187313
+  - name: GLaDOS-US-05
     type: ss
-    server: e29715d.t2.glados-config.net
+    server: e29715d.u5.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.ch:187313
-  - name: GLaDOS-TW-03
+      host: e29715d.dl.microsoft.com:187313
+  - name: GLaDOS-US-06
     type: ss
-    server: e29715d.t3.glados-config.net
+    server: e29715d.u6.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.epicgames.com:187313
-  - name: GLaDOS-TW-04
+      host: e29715d.dl.nintendo.de:187313
+  - name: GLaDOS-JP-01
     type: ss
-    server: e29715d.t4.glados-config.net
+    server: e29715d.j1.gladns.com
     port: 2377
-    cipher: chacha20-ietf-poly1305
-    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
-    plugin: obfs
-    plugin-opts:
-      mode: tls
-      host: e29715d.dl.microsoft.cz:187313
-  - name: GLaDOS-TW-05
-    type: ss
-    server: e29715d.t5.glados-config.net
-    port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
       host: e29715d.dl.nintendo.net:187313
-  - name: GLaDOS-TW-06
+  - name: GLaDOS-JP-02
     type: ss
-    server: e29715d.t6.glados-config.net
+    server: e29715d.j2.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.eu:187313
-  - name: GLaDOS-SG-01
+      host: e29715d.dl.microsoft.io:187313
+  - name: GLaDOS-JP-03
     type: ss
-    server: e29715d.s1.glados-config.net
+    server: e29715d.j3.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.nintendo.jp:187313
-  - name: GLaDOS-SG-02
+      host: e29715d.dl.blizzard.com:187313
+  - name: GLaDOS-TW-01
     type: ss
-    server: e29715d.s2.glados-config.net
+    server: e29715d.t1.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.ee:187313
-  - name: GLaDOS-SG-03
+      host: e29715d.dl.microsoft.lv:187313
+  - name: GLaDOS-TW-02
     type: ss
-    server: e29715d.s3.glados-config.net
+    server: e29715d.t2.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.ge:187313
-
-  - name: GLaDOS-D1-01
+      host: e29715d.dl.nintendo.com:187313
+  - name: GLaDOS-TW-03
     type: ss
-    server: e29715d.da.glados-config.net
+    server: e29715d.t3.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.ee:187313
-  - name: GLaDOS-D1-02
+      host: e29715d.dl.nintendo.es:187313
+  - name: GLaDOS-TW-04
     type: ss
-    server: e29715d.db.glados-config.net
+    server: e29715d.t4.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
       host: e29715d.dl.microsoft.fi:187313
-  - name: GLaDOS-D1-03
+  - name: GLaDOS-TW-05
     type: ss
-    server: e29715d.dc.glados-config.net
+    server: e29715d.t5.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.cl:187313
+      host: e29715d.dl.microsoft.jp:187313
+  - name: GLaDOS-TW-06
+    type: ss
+    server: e29715d.t6.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.com:187313
+  - name: GLaDOS-SG-01
+    type: ss
+    server: e29715d.s1.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.nintendo.es:187313
+  - name: GLaDOS-SG-02
+    type: ss
+    server: e29715d.s2.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.lt:187313
+  - name: GLaDOS-SG-03
+    type: ss
+    server: e29715d.s3.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.hu:187313
+
+  - name: GLaDOS-D1-01
+    type: ss
+    server: e29715d.da.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.cz:187313
+  - name: GLaDOS-D1-02
+    type: ss
+    server: e29715d.db.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.de:187313
+  - name: GLaDOS-D1-03
+    type: ss
+    server: e29715d.dc.gladns.com
+    port: 2377
+    udp: false
+    cipher: chacha20-ietf-poly1305
+    password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: e29715d.dl.microsoft.ch:187313
 
   - name: GLaDOS-S2-01
     type: ss
-    server: e29715d.f1.glados-config.net
+    server: e29715d.f1.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.lt.net:187313
+      host: e29715d.dl.microsoft.ee.net:187313
   - name: GLaDOS-S2-02
     type: ss
-    server: e29715d.f2.glados-config.net
+    server: e29715d.f2.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.fi.net:187313
+      host: e29715d.dl.nintendo.es.net:187313
   - name: GLaDOS-S2-03
     type: ss
-    server: e29715d.f3.glados-config.net
+    server: e29715d.f3.gladns.com
     port: 2377
+    udp: false
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.lt.net:187313
+      host: e29715d.dl.microsoft.eu.net:187313
 
+  - name: GLaDOS-T3-01
+    type: trojan
+    server: e29715d.ha.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
+  - name: GLaDOS-T3-02
+    type: trojan
+    server: e29715d.hb.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
+  - name: GLaDOS-T3-03
+    type: trojan
+    server: e29715d.hc.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
+  - name: GLaDOS-T3-04
+    type: trojan
+    server: e29715d.hd.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
+  - name: GLaDOS-T3-05
+    type: trojan
+    server: e29715d.he.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
+  - name: GLaDOS-T3-06
+    type: trojan
+    server: e29715d.hf.gladns.com
+    port: 443
+    sni: n2.gladns.com
+    password: "09ca748dd1359c9c"
+    udp: true
+    network: grpc
+    alpn: ["h2"]
+    grpc-opts:
+      grpc-service-name: db
   - name: GLaDOS-H2-01
     type: trojan
-    server: e29715d.p1.glados-config.net
+    server: e29715d.p1.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -482,7 +614,7 @@ proxies:
       grpc-service-name: db
   - name: GLaDOS-H2-02
     type: trojan
-    server: e29715d.p2.glados-config.net
+    server: e29715d.p2.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -493,7 +625,7 @@ proxies:
       grpc-service-name: db
   - name: GLaDOS-H2-03
     type: trojan
-    server: e29715d.p3.glados-config.net
+    server: e29715d.p3.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -504,7 +636,7 @@ proxies:
       grpc-service-name: db
   - name: GLaDOS-H2-04
     type: trojan
-    server: e29715d.p4.glados-config.net
+    server: e29715d.p4.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -515,7 +647,7 @@ proxies:
       grpc-service-name: db
   - name: GLaDOS-H2-05
     type: trojan
-    server: e29715d.p5.glados-config.net
+    server: e29715d.p5.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -526,7 +658,7 @@ proxies:
       grpc-service-name: db
   - name: GLaDOS-H2-06
     type: trojan
-    server: e29715d.p6.glados-config.net
+    server: e29715d.p6.gladns.com
     port: 443
     sni: n2.gladns.com
     password: "09ca748dd1359c9c"
@@ -536,120 +668,64 @@ proxies:
     grpc-opts:
       grpc-service-name: db
 
-  - name: GLaDOS-H3-01
-    type: trojan
-    server: e29715d.ha.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
-  - name: GLaDOS-H3-02
-    type: trojan
-    server: e29715d.hb.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
-  - name: GLaDOS-H3-03
-    type: trojan
-    server: e29715d.hc.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
-  - name: GLaDOS-H3-04
-    type: trojan
-    server: e29715d.hd.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
-  - name: GLaDOS-H3-05
-    type: trojan
-    server: e29715d.he.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
-  - name: GLaDOS-H3-06
-    type: trojan
-    server: e29715d.hf.glados-config.net
-    port: 443
-    sni: n2.gladns.com
-    password: "09ca748dd1359c9c"
-    udp: true
-    network: grpc
-    alpn: ["h2"]
-    grpc-opts:
-      grpc-service-name: db
 
   - name: GLaDOS-Netflix-01
     type: ss
-    server: e29715d.d1.glados-config.net
+    server: e29715d.d1.gladns.com
     port: 2377
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    udp: false
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.nintendo.net.net:187313
+      host: e29715d.dl.microsoft.cat.net:187313
   - name: GLaDOS-Netflix-02
     type: ss
-    server: e29715d.d2.glados-config.net
+    server: e29715d.d2.gladns.com
     port: 2377
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    udp: false
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.net.net:187313
+      host: e29715d.dl.microsoft.md.net:187313
   - name: GLaDOS-Netflix-03
     type: ss
-    server: e29715d.d3.glados-config.net
+    server: e29715d.d3.gladns.com
     port: 2377
     cipher: chacha20-ietf-poly1305
     password: "t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv"
+    udp: false
     plugin: obfs
     plugin-opts:
       mode: tls
-      host: e29715d.dl.microsoft.io.net:187313
+      host: e29715d.dl.mozilla.net.net:187313
+
 
 proxy-groups:
   - name: Auto-Fast
     type: "url-test"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 600
-    tolerance: 80
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 120
+    tolerance: 50
     proxies:
-        - GLaDOS-R1-01
-        - GLaDOS-R1-02
-        - GLaDOS-R1-03
-        - GLaDOS-R1-04
-        - GLaDOS-R1-05
-        - GLaDOS-R1-06
-        - GLaDOS-R1-07
-        - GLaDOS-R1-08
-        - GLaDOS-R1-09
+        - GLaDOS-R2-01
+        - GLaDOS-R2-02
+        - GLaDOS-R2-03
+        - GLaDOS-R2-04
+        - GLaDOS-R2-05
+        - GLaDOS-R2-06
+        - GLaDOS-R2-07
+        - GLaDOS-R2-08
+        - GLaDOS-R2-09
+        - GLaDOS-T3-01
+        - GLaDOS-T3-02
+        - GLaDOS-T3-03
+        - GLaDOS-T3-04
+        - GLaDOS-T3-05
+        - GLaDOS-T3-06
         - GLaDOS-H2-01
         - GLaDOS-H2-02
         - GLaDOS-H2-03
@@ -664,9 +740,9 @@ proxy-groups:
         - GLaDOS-US-06
   - name: Auto-Edge
     type: "url-test"
-    url: "http://www.gstatic.com/generate_204"
+    url: "http://www.gstatic.cn/generate_204"
     interval: 600
-    tolerance: 100
+    tolerance: 50
     proxies:
         - GLaDOS-B1-01
         - GLaDOS-B1-02
@@ -677,23 +753,11 @@ proxy-groups:
         - GLaDOS-B1-07
         - GLaDOS-B1-08
         - GLaDOS-B1-09
-        - GLaDOS-H3-01
-        - GLaDOS-H3-02
-        - GLaDOS-H3-03
-        - GLaDOS-H3-04
-        - GLaDOS-H3-05
-        - GLaDOS-H3-06
-        - GLaDOS-US-01
-        - GLaDOS-US-02
-        - GLaDOS-US-03
-        - GLaDOS-US-04
-        - GLaDOS-US-05
-        - GLaDOS-US-06
   - name: Auto-Failover
     type: "url-test"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 1800
-    tolerance: 200
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 300
+    tolerance: 50
     proxies:
         - GLaDOS-US-01
         - GLaDOS-US-02
@@ -703,17 +767,17 @@ proxy-groups:
         - GLaDOS-US-06
   - name: Express
     type: "fallback"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 600
-    tolerance: 80
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 300
+    tolerance: 50
     proxies:
         - Auto-Edge
         - Auto-Fast
         - Auto-Failover
   - name: Auto
     type: "fallback"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 900
+    url: "http://www.gstatic.cn/generate_204"
+    interval: 600
     proxies:
         - Auto-Fast
         - Auto-Edge
@@ -746,7 +810,7 @@ proxy-groups:
   - name: Video
     type: "select"
     interval: 900
-    url: "http://www.gstatic.com/generate_204"
+    url: "http://www.gstatic.cn/generate_204"
     proxies:
         - Express
         - GLaDOS-US-01
@@ -772,7 +836,7 @@ proxy-groups:
         - GLaDOS-D1-03
   - name: Netflix
     type: "select"
-    url: "http://www.gstatic.com/generate_204"
+    url: "http://www.gstatic.cn/generate_204"
     interval: 1200
     proxies:
         - GLaDOS-Netflix-01
@@ -782,9 +846,9 @@ proxy-groups:
         - DIRECT
   - name: Scholar
     type: "fallback"
-    url: "http://www.gstatic.com/generate_204"
+    url: "http://www.gstatic.cn/generate_204"
     interval: 300
-    tolerance: 40
+    tolerance: 50
     proxies:
         - GLaDOS-S2-01
         - GLaDOS-S2-02
@@ -844,8 +908,6 @@ rules:
 - DOMAIN,graph.instagram.com,DIRECT
 - DOMAIN,www.googleadservices.com,DIRECT
 - DOMAIN,control.kochava.com,DIRECT
-- DOMAIN,www.google-analytics.com,DIRECT
-- DOMAIN,ssl.google-analytics.com,DIRECT
 - DOMAIN,nexus.officeapps.live.com,DIRECT
 - DOMAIN,googleads.g.doubleclick.net,DIRECT
 - DOMAIN,e.crashlytics.com,DIRECT
@@ -854,6 +916,8 @@ rules:
 - DOMAIN-SUFFIX,googlesyndication.com,DIRECT
 - DOMAIN-SUFFIX,googletagmanager.com,DIRECT
 - DOMAIN-SUFFIX,googletagservices.com,DIRECT
+- DOMAIN-SUFFIX,applicationinsights.azure.com,DIRECT
+- DOMAIN-SUFFIX,google-analytics.com,DIRECT
 
 #specific geo services
 - DOMAIN-SUFFIX,paypal.com,Proxy
@@ -949,9 +1013,8 @@ rules:
 - DOMAIN-SUFFIX,bigbeans.solutions,Proxy
 - DOMAIN-SUFFIX,dis.gd,Proxy
 
+
 #dev
-- DOMAIN-SUFFIX,gstatic.com,Proxy
-- DOMAIN-SUFFIX,google.com,Proxy
 - DOMAIN-SUFFIX,figma.com,Proxy
 - DOMAIN-SUFFIX,v2ex.com,Proxy
 - DOMAIN-KEYWORD,gitlab,Proxy
@@ -1095,7 +1158,6 @@ rules:
 - DOMAIN-SUFFIX,iflytek.com,DIRECT
 
 - DOMAIN,dig.bdurl.net,DIRECT
-- DOMAIN,pagead2.googlesyndication.com,DIRECT
 
 
 # DIRECTEND
@@ -1163,21 +1225,6 @@ rules:
 - DOMAIN,ifconfig.me,Netflix
 
 # hot fix
-- DOMAIN-KEYWORD,gmail,Proxy
-- DOMAIN-SUFFIX,google.com,Proxy
-- DOMAIN,services.googleapis.cn,Proxy
-- DOMAIN-SUFFIX,bard.google.com,Proxy
-- DOMAIN,gemini.google.com,Proxy
-- DOMAIN,makersuite.google.com,Proxy
-- DOMAIN,generativelanguage.googleapis.com,Proxy
-- DOMAIN,alkalimakersuite-pa.clients6.google.com,Proxy
-- DOMAIN,ai.google.dev,Proxy
-- DOMAIN,googleapis.cn,Proxy
-- DOMAIN,services.googleapis.cn,Proxy
-- DOMAIN,google.com,Proxy
-- DOMAIN-SUFFIX,google.cn,Proxy
-- DOMAIN-SUFFIX,googleapis.cn,Proxy
-
 - DOMAIN-SUFFIX,ping.pe,Proxy
 - DOMAIN-SUFFIX,f2pool.com,Proxy
 - DOMAIN-SUFFIX,static.wikia.nocookie.net,Proxy
@@ -1186,6 +1233,7 @@ rules:
 # common site
 - DOMAIN-KEYWORD,facebook,Proxy
 - DOMAIN-SUFFIX,fb.me,Proxy
+- DOMAIN-KEYWORD,gmail,Proxy
 - DOMAIN-KEYWORD,twitter,Proxy
 - DOMAIN-KEYWORD,instagram,Proxy
 - DOMAIN-SUFFIX,twimg.com,Proxy
@@ -1223,7 +1271,6 @@ rules:
 - DOMAIN-SUFFIX,amazonaws.com,Proxy
 - DOMAIN-SUFFIX,imdb.com,Proxy
 - DOMAIN-SUFFIX,whatsapp.com,Proxy
-- DOMAIN-SUFFIX,google.co.jp,Proxy
 - DOMAIN-SUFFIX,wordpress.com,Proxy
 - DOMAIN-SUFFIX,nytimes.com,Proxy
 - DOMAIN-SUFFIX,spotify.com,Proxy
@@ -1397,7 +1444,26 @@ rules:
 - DOMAIN-SUFFIX,vimeocdn.com,Video
 
 # > Google
+- DOMAIN-SUFFIX,google.co.jp,Proxy
 - DOMAIN-KEYWORD,google,Proxy
+- DOMAIN-SUFFIX,google.com,Proxy
+- DOMAIN,services.googleapis.cn,Proxy
+- DOMAIN,google.com,Proxy
+- DOMAIN-SUFFIX,google.cn,Proxy
+- DOMAIN-SUFFIX,googleapis.cn,Proxy
+
+- DOMAIN,services.googleapis.cn,Proxy
+- DOMAIN,googleapis.cn,Proxy
+- DOMAIN-SUFFIX,gstatic.com,Proxy
+- DOMAIN-SUFFIX,google.com,Proxy
+- DOMAIN-SUFFIX,bard.google.com,Proxy
+- DOMAIN,gemini.google.com,Proxy
+- DOMAIN,makersuite.google.com,Proxy
+- DOMAIN,generativelanguage.googleapis.com,Proxy
+- DOMAIN,alkalimakersuite-pa.clients6.google.com,Proxy
+- DOMAIN,ai.google.dev,Proxy
+- DOMAIN,pagead2.googlesyndication.com,DIRECT
+
 - DOMAIN-SUFFIX,abc.xyz,Proxy
 - DOMAIN-SUFFIX,android.com,Proxy
 - DOMAIN-SUFFIX,androidify.com,Proxy
@@ -1666,11 +1732,9 @@ rules:
 # RULE VERSION
 - DOMAIN,2020020202.version.clash.im,REJECT
 
-- DOMAIN-SUFFIX,cn,DIRECT
 - GEOIP,CN,DIRECT
-
+- GEOIP,CA,GLaDOS-US-01
 - GEOIP,SG,GLaDOS-SG-01
-- GEOIP,CA,GLaDOS-US-02
 - GEOIP,TW,GLaDOS-TW-01
 - GEOIP,HK,GLaDOS-TW-02
 - GEOIP,JP,GLaDOS-TW-03
