@@ -1,1 +1,1 @@
-# config
+# Clash
